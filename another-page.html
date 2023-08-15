@@ -27,7 +27,7 @@
                 <!-- Deposite Box -->
                 <div class="card-box bg-[#1982c4] p-8 rounded-md">
                     <h3 class="text-2xl text-white uppercase">Deposit</h3>
-                    <h2 id="depositBox" class="font-bold text-5xl text-white">$00</h2>
+                    <h2 class="font-bold text-5xl text-white">$<span id="depositBox">00</span></h2>
                 </div>
     
                 <!-- withdraw Box -->
@@ -39,7 +39,7 @@
                 <!-- Total Balance Box -->
                 <div class="card-box bg-[#ff595e] p-8 rounded-md">
                     <h3 class="text-2xl text-white uppercase">Balance</h3>
-                    <h2 id="balanceBox" class="font-bold text-5xl text-white">$1200</h2>
+                    <h2 class="font-bold text-5xl text-white">$<span id="balanceBox">00</span></h2>
                 </div>
                 
             </div>
@@ -52,14 +52,14 @@
                 <!-- Deposit box  -->
                 <div class="card-box bg-[#04a777] p-8 rounded-md">
                     <h3 class="text-2xl text-white uppercase">Please Deposit</h3>
-                    <input id="depositInputBox" type="text" placeholder="$ Enter deposit amount" class="input input-bordered w-full text-black my-3" />
+                    <input id="depositInputBox" type="number" placeholder="$ Enter deposit amount" class="input input-bordered w-full text-black my-3" />
                     <button id="deposit-btn" class="btn bg-[#ffffff] w-24">Deposit</button>
                 </div>
 
                 <!-- Withdraw Input box  -->
                 <div class="card-box bg-[#0081a7] p-8 rounded-md">
                     <h3 class="text-2xl text-white uppercase">Please Withdraw</h3>
-                    <input id="withdrawInputBox" type="text" placeholder="$ Enter withdraw amount" class="input input-bordered w-full text-black my-3" />
+                    <input id="withdrawInputBox" type="number" placeholder="$ Enter withdraw amount" class="input input-bordered w-full text-black my-3" />
                     <button id="withdraw-btn" class="btn bg-[#ffffff] w-24">Withdraw</button>
                 </div>
 
