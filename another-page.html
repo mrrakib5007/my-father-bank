@@ -10,25 +10,65 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
-<body>
+<body class="font-sans">
 
     <header class="mt-5">
         <h3 class="text-4xl font-bold text-center "> 
-            <span class="text-[#22A6F2]">My Father Bank </span> Dashboard
+            <span class="text-[#1982c4]">My Father Bank </span> Dashboard
         </h3>
     </header>
 
-    <main class="card w-[80%] mx-auto mt-10 p-8 border-2 border-gray-400 text-black">
-        <div class="grid grid-">
-            <div class="card-box bg-[#239746]">
-                <h3>Deposit</h3>
-                <h2>$00</h2>
+    <main class="card w-[80%] mx-auto mt-10 p-8 border-gray-400 text-black">
+        
+        <!-- balance show section  -->
+        <section>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                <!-- Deposite Box -->
+                <div class="card-box bg-[#1982c4] p-8 rounded-md">
+                    <h3 class="text-2xl text-white uppercase">Deposit</h3>
+                    <h2 id="depositBox" class="font-bold text-5xl text-white">$00</h2>
+                </div>
+    
+                <!-- withdraw Box -->
+                <div class="card-box bg-[#6a4c93] p-8 rounded-md">
+                    <h3 class="text-2xl text-white uppercase">Withdraw</h3>
+                    <h2 id="withdrawBox" class="font-bold text-5xl text-white">$00</h2>
+                </div>
+    
+                <!-- Total Balance Box -->
+                <div class="card-box bg-[#ff595e] p-8 rounded-md">
+                    <h3 class="text-2xl text-white uppercase">Balance</h3>
+                    <h2 id="balanceBox" class="font-bold text-5xl text-white">$1200</h2>
+                </div>
+                
             </div>
-        </div>
+        </section>
+
+        <!-- Deposit and withdraw section  -->
+        <section class="mt-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+
+                <!-- Deposit box  -->
+                <div class="card-box bg-[#04a777] p-8 rounded-md">
+                    <h3 class="text-2xl text-white uppercase">Please Deposit</h3>
+                    <input id="depositInputBox" type="text" placeholder="$ Enter deposit amount" class="input input-bordered w-full text-black my-3" />
+                    <button id="deposit-btn" class="btn bg-[#ffffff] w-24">Deposit</button>
+                </div>
+
+                <!-- Withdraw Input box  -->
+                <div class="card-box bg-[#0081a7] p-8 rounded-md">
+                    <h3 class="text-2xl text-white uppercase">Please Withdraw</h3>
+                    <input id="withdrawInputBox" type="text" placeholder="$ Enter withdraw amount" class="input input-bordered w-full text-black my-3" />
+                    <button id="withdraw-btn" class="btn bg-[#ffffff] w-24">Withdraw</button>
+                </div>
+
+            </div>
+        </section>
     </main>
 
     
     <!-- custom javascript -->
-    <script src="main.js"></script>
+    <script src="dashboard.js"></script>
 </body>
 </html>
