@@ -1,24 +1,19 @@
 
-let userAccountList  = [
-    {
-        email: 'abcd@gmail.com',
-        pass: '1234#6R'
-    },
-    {
-        email: 'abcd12@gmail.com',
-        pass: '1234#6Ra'
-    },
-    {
-        email: 'abcd1234@gmail.com',
-        pass: '134#6Ra'
-    },
-];
-
 const btnLogin  = document.getElementById('btn-login');
 
 btnLogin.addEventListener('click', function(){
-    const emailInput    = document.getElementById('email-input').value;
-    const passInput     = document.getElementById('pass-input').value;
+    const emailInput    = document.getElementById('email-input');
+    const email         = emailInput.value;
 
-    alert(userAccountList);
+    const passInput     = document.getElementById('pass-input');
+    const password      = passInput.value;
+
+    if(email === 'abcd@gmail.com' && password == '1234'){
+        window.location.href = 'another-page.html';
+
+    }else{
+        alert('Invalid Input!!');
+    }
+
+
 });
