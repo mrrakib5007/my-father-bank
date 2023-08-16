@@ -18,11 +18,17 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
     const balanceTotal  = parseFloat(balanceTotalString);
 
     // Total Deposite Amount Calculate
-    depositBox.innerText    = depositTotal + depositAmount;
-    balanceBox.innerText    = balanceTotal + depositAmount;
+    if(depositAmount > 0){
+        depositBox.innerText    = depositTotal + depositAmount;
+        balanceBox.innerText    = balanceTotal + depositAmount;
+        
+    }else {
+        alert('Invalid Input');
+    }
 
     // Clear deposit field
     depositInputBox.value     = '';
+
 
 });
 
@@ -34,8 +40,26 @@ document.getElementById('withdraw-btn').addEventListener('click', function(){
     const withdrawInputAmountString = withdrawInputBox.value;
     const withdrawInputAmount = parseFloat(withdrawInputAmountString);
 
-    // Total Withdraw Amount Box 
-    
+    // Total Withdraw Amount Box
+    const withdrawTotal     = document.getElementById('withdrawBox');
+    const withdrawTotalAmountString = withdrawTotal.innerText;
+    const withdrawTotalAmount   = parseFloat(withdrawTotalAmountString);
+
+    // total amount 
+    const balanceBox    = document.getElementById('balanceBox');
+    const balanceTotalString  = balanceBox.innerText;
+    const balanceTotal  = parseFloat(balanceTotalString);
+
+    // Total Amount Calculation 
+    if(withdrawInputAmount <= balanceTotal && withdrawInputAmount >= 0){
+        balanceBox.innerText = balanceTotal - withdrawInputAmount;
+        withdrawTotal.innerText = withdrawTotalAmount + withdrawInputAmount;
+    }else {
+        alert('Invalid Withdraw Amount!!');
+    }
+
+    // Clear withdraw field
+    withdrawInputBox.value     = '';
 
 });
 
