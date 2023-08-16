@@ -4,24 +4,39 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
     
     // Deposit Input Amount Getting 
     const depositInputBox = document.getElementById('depositInputBox');
-    const depositAmount   = depositInputBox.value;
+    const depositAmountString   = depositInputBox.value;
+    const depositAmount   = parseFloat(depositAmountString);
     
     // Deposit Total Box
     const depositBox    = document.getElementById('depositBox');
-    const depositTotal  = depositBox.innerText;
-
+    const depositTotalString  = depositBox.innerText;
+    const depositTotal  = parseFloat(depositTotalString);
 
     // Total Balance Box
     const balanceBox    = document.getElementById('balanceBox');
-    const balanceTotal  = balanceBox.innerText;
+    const balanceTotalString  = balanceBox.innerText;
+    const balanceTotal  = parseFloat(balanceTotalString);
 
-    depositBox.innerText    = parseFloat(depositTotal) + parseFloat(depositAmount);
-    balanceBox.innerText    = parseFloat(balanceTotal) + parseFloat(depositAmount);
+    // Total Deposite Amount Calculate
+    depositBox.innerText    = depositTotal + depositAmount;
+    balanceBox.innerText    = balanceTotal + depositAmount;
 
     // Clear deposit field
     depositInputBox.value     = '';
 
+});
+
+
+// Withdraw Buttton Event Linstener
+document.getElementById('withdraw-btn').addEventListener('click', function(){
+    // Withdraw Input Amount Getting 
+    const withdrawInputBox  = document.getElementById('withdrawInputBox');
+    const withdrawInputAmountString = withdrawInputBox.value;
+    const withdrawInputAmount = parseFloat(withdrawInputAmountString);
+
+    // Total Withdraw Amount Box 
     
+
 });
 
 
